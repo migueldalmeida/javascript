@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt 'arial';
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        let a = document.getElementById('area') //*guanabara disse que deixou assim pra poder funcionar em mais de uma function, mas nao e recomendado voce fazer isso nao, gerlamente e bom voce deixar logo abaixo, tipo, "function clicar () { ai ficaria abaixo desse texto e acima do innerText*// (pra poder servir pra todas as tres functions)
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar () {
+            a.innerText = 'Entrou!'
+        }
+        function sair () {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
