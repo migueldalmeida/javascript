@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <p>Qual a sua nacionalidade?</p>
+    <input type="text" id="txtnac">
+    <input type="button" value="Conferir" id="btn">
+    <div class="resultado">Resultado</div>
+    <script>
+        let btn = document.querySelector('#btn')
+        btn.addEventListener('click', conferir)
+        function conferir () {
+            let nacionalidade = document.querySelector('#txtnac')
+            let nac = nacionalidade.value.trim()
+            let resultado = document.querySelector('.resultado')
+            if (nac == 'Brasileiro') {
+                resultado.innerHTML = 'Voce e Brasileiro!'
+            } else {
+                resultado.innerHTML = 'Estrangeiro.'
+            }
+        }
+    </script>
+</body>
+</html>

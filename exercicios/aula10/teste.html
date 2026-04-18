@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Somador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 300px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #res {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Somador</h2>
+    <input type="number" id="txtn1" placeholder="Número 1">
+    <input type="number" id="txtn2" placeholder="Número 2">
+    <button id="somadorbottom">Somar</button>
+    <p id="res"></p>
+    <script>
+        let somadorbottom = document.querySelector('#somadorbottom')
+        somadorbottom.addEventListener('click', somar)
+        function somar() {
+            let txtn1 = document.querySelector('#txtn1')
+            let txtn2 = document.querySelector('#txtn2')
+            let resultado = document.querySelector('#res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 + n2
+            resultado.innerHTML = `O resultado soma e ${s}`
+        }
+        
+    
+    </script>
+  </div>
+</body>
+</html>

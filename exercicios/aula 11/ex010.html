@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="" id="txtvel">
+    <input type="button" value="Verificar" id="txtbtn">
+    <div id="resultado">Resultado</div>
+    <script>
+        let btn = document.querySelector('#txtbtn')
+        btn.addEventListener ('click', verify)
+        function verify () {
+            let resultado = document.querySelector('#resultado')
+            let txtvel = document.querySelector('#txtvel')
+            let vel = Number(txtvel.value)
+            if (vel > 60) {
+                resultado.innerHTML = "Multado!"
+            } else {
+                resultado.innerHTML = "Tudo certinho parceiro!"
+            }
+        }
+    </script>
+</body>
+</html>
