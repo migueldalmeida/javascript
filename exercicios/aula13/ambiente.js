@@ -3,7 +3,7 @@ do  {
     console.log(`Passo ${passo}`)
     passo++
 } while (passo <= 20)
-
+  
 /*
 
 let passo = 1
